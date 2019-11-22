@@ -1,0 +1,136 @@
+@font-face {
+    font-family: "Lato";
+    src: url("../font/Roboto/Roboto-Regular.ttf")
+}
+
+p{
+    margin : 0;
+    padding : 0;
+}
+
+.logo{
+    width:100px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.card-img-custom{
+    object-fit:cover;
+    width:100px;
+    height:80px;
+    border-radius: 3px;
+}
+
+.card-title-custom{
+    font-family : Roboto, serif;
+    font-weight:bold;
+    font-size:16px;
+    color : black; !important;
+}
+
+.card-title-custom2{
+    font-family : Roboto, serif;
+    font-weight:bold;
+    font-size:16px;
+    color : #ffffff; !important;
+}
+
+.card-text-custom{
+    font-family : Roboto, serif;
+    font-size:13px;
+    color : #717171;!important;
+}
+
+.card-text-custom2{
+    font-family : Roboto, serif;
+    font-size:13px;
+    color : #6d6d6d;!important;
+}
+
+.card-text-custom3{
+    font-family : Roboto, serif;
+    font-size:18px;
+    color : #6d6d6d;!important;
+}
+
+.nav-active{
+    color: dodgerblue;
+}
+
+.bsd{
+    box-shadow: 2px 2px 2px #d0d0d0;
+}
+
+.icon-big{
+    font-size:40px;
+}
+
+.nav-black{
+    color:black; !important;
+}
+
+.none{
+    display:none;
+}
+
+.restaurant-image-detail{
+    object-fit:cover;
+    width:360px;
+    height:200px;
+    margin-top:40px;
+}
+
+.top-row{
+    background-color : #d90000;
+    color: white;
+}
+
+.detail-title{
+    font-family: Roboto,serif;
+    font-weight:bold;
+    font-size:24px;
+}
+
+.detail-alamat{
+    font-family : Roboto, serif;
+    font-size:14px;
+    color : #515151;!important;
+}
+
+.detail-category{
+    font-family : Roboto, serif;
+    font-size:13px;
+    color : #6d6d6d;!important;
+}
+
+.detail-desc{
+    font-family : Roboto, serif;
+    font-size:14px;
+    color : #555555;!important;
+}
+
+.menu-img{
+    width: 90px;
+    height:90px;
+    border-radius:5px;
+    margin-left:21px;
+    margin-top:4px;
+}
+
+.menu-nama{
+    font-family : Roboto, serif;
+    font-size:16px;
+    color : #555555;!important;
+}
+
+.menu-deskripsi{
+    font-family : Roboto, serif;
+    font-size:12px;
+    color : #8a8a8a;!important;
+}
+
+.menu-harga{
+    font-family : Roboto, serif;
+    font-size:13px;
+    color : #555555;!important;
+}

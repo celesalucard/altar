@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Sort</title>
+
+<!--    Bootstrap-->
+    <link rel="stylesheet" href="bootstrap/bootstrap-4.3.1-dist/css/bootstrap.css">
+    <script src="bootstrap/bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+<!--    Material icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!--    Custom CSS-->
+    <link rel="stylesheet" href="style/main.css">
+
+<body id="bs-override">
+
+<header>
+    <img class="logo d-block mx-auto" src="img/altar.png" alt="logo">
+</header>
+
+<main>
+<!--    Filter-->
+<div class="d-flex justify-content-around" style="margin:30px 0px;">
+    <a onclick="showFilterHarga()" class="card mb-3 mx-auto d-block bsd d-flex justify-content-center align-items-center" style="width: 80px; height:80px;">
+        <div class="row">
+            <i class="material-icons icon-big">attach_money</i>
+        </div>
+        <div class="row">
+            <p class="card-text-custom">Harga</p>
+        </div>
+    </a>
+
+    <a onclick="showFilterKategori()"  class="card mb-3 mx-auto d-block bsd d-flex justify-content-center align-items-center" style="width: 80px; height:80px;">
+        <div class="row">
+            <i class="material-icons icon-big">fastfood</i>
+        </div>
+        <div class="row">
+            <p class="card-text-custom">Kategori</p>
+        </div>
+    </a>
+
+    <a onclick="showFilterLokasi()" class="card mb-3 mx-auto d-block bsd d-flex justify-content-center align-items-center" style="width: 80px; height:80px;">
+        <div class="row">
+            <i class="material-icons icon-big">gps_fixed</i>
+        </div>
+        <div class="row">
+            <p class="card-text-custom">Lokasi</p>
+        </div>
+    </a>
+</div>
+
+<!--Opsi Filter Harga-->
+    <div id="filter-harga" class="none">
+        <div class="card mb-3 mx-auto d-block bsd" style="max-width: 250px;">
+            <div class="row no-gutters d-block mx-auto">
+                <div class="col-12 d-block mx-auto" style="padding: 0px 10px;">
+                    <p class="card-text-custom3 text-center">< Rp 10.000</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3 mx-auto d-block bsd" style="max-width: 250px;">
+            <div class="row no-gutters d-block mx-auto">
+                <div class="col-12 d-block mx-auto" style="padding: 0px 10px;">
+                    <p class="card-text-custom3 text-center">Rp 10.000 - Rp 20.000</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3 mx-auto d-block bsd" style="max-width: 250px;">
+            <div class="row no-gutters d-block mx-auto">
+                <div class="col-12 d-block mx-auto" style="padding: 0px 10px;">
+                    <p class="card-text-custom3 text-center">> Rp 20.000</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Opsi Filter Kategori-->
+    <div id="filter-kategori" class="none">
+        <div class="card mb-3 mx-auto d-block bsd" style="max-width: 250px;">
+            <div class="row no-gutters d-block mx-auto">
+                <div class="col-12 d-block mx-auto" style="padding: 0px 10px;">
+                    <p class="card-text-custom3 text-center">Seafood</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3 mx-auto d-block bsd" style="max-width: 250px;">
+            <div class="row no-gutters d-block mx-auto">
+                <div class="col-12 d-block mx-auto" style="padding: 0px 10px;">
+                    <p class="card-text-custom3 text-center">Rice</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3 mx-auto d-block bsd" style="max-width: 250px;">
+            <div class="row no-gutters d-block mx-auto">
+                <div class="col-12 d-block mx-auto" style="padding: 0px 10px;">
+                    <p class="card-text-custom3 text-center">Noodles</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3 mx-auto d-block bsd" style="max-width: 250px;">
+            <div class="row no-gutters d-block mx-auto">
+                <div class="col-12 d-block mx-auto" style="padding: 0px 10px;">
+                    <p class="card-text-custom3 text-center">Bread</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3 mx-auto d-block bsd" style="max-width: 250px;">
+            <div class="row no-gutters d-block mx-auto">
+                <div class="col-12 d-block mx-auto" style="padding: 0px 10px;">
+                    <p class="card-text-custom3 text-center">Snack</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3 mx-auto d-block bsd" style="max-width: 250px;">
+            <div class="row no-gutters d-block mx-auto">
+                <div class="col-12 d-block mx-auto" style="padding: 0px 10px;">
+                    <p class="card-text-custom3 text-center">Beverages</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3 mx-auto d-block bsd" style="max-width: 250px;">
+            <div class="row no-gutters d-block mx-auto">
+                <div class="col-12 d-block mx-auto" style="padding: 0px 10px;">
+                    <p class="card-text-custom3 text-center">Chicken & Duck</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--Opsi Filter Lokasi-->
+    <div id="filter-lokasi" class="none">
+        <div class="card mb-3 mx-auto d-block bsd" style="max-width: 250px;">
+            <div class="row no-gutters d-block mx-auto">
+                <div class="col-12 d-block mx-auto" style="padding: 0px 10px;">
+                    <p class="card-text-custom3 text-center">Area Depan ITB</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3 mx-auto d-block bsd" style="max-width: 250px;">
+            <div class="row no-gutters d-block mx-auto">
+                <div class="col-12 d-block mx-auto" style="padding: 0px 10px;">
+                    <p class="card-text-custom3 text-center">ITB Bagian Barat</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3 mx-auto d-block bsd" style="max-width: 250px;">
+            <div class="row no-gutters d-block mx-auto">
+                <div class="col-12 d-block mx-auto" style="padding: 0px 10px;">
+                    <p class="card-text-custom3 text-center">ITB Bagian Timur</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3 mx-auto d-block bsd" style="max-width: 250px;">
+            <div class="row no-gutters d-block mx-auto">
+                <div class="col-12 d-block mx-auto" style="padding: 0px 10px;">
+                    <p class="card-text-custom3 text-center">Belakang Area ITB</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <nav class="navbar navbar-light bg-light fixed-bottom justify-content-around">
+        <a href="index.html" class="nav-black">
+            <i class="material-icons">home</i>
+        </a>
+        <a href="#" class="nav-active">
+            <i class="material-icons">sort</i>
+        </a>
+    </nav>
+</footer>
+
+<script>
+    var h = document.getElementById('filter-harga');
+    var k = document.getElementById('filter-kategori');
+    var l = document.getElementById('filter-lokasi');
+    function showFilterHarga(){
+        if (h.classList.contains('none')){
+            h.classList.remove('none');
+            k.classList.add('none');
+            l.classList.add('none');
+        }
+    }
+
+    function showFilterKategori() {
+        if (k.classList.contains('none')) {
+            h.classList.add('none');
+            k.classList.remove('none');
+            l.classList.add('none');
+        }
+    }
+
+    function showFilterLokasi() {
+        if (l.classList.contains('none')) {
+            h.classList.add('none');
+            k.classList.add('none');
+            l.classList.remove('none');
+        }
+    }
+</script>
+</body>
+</html>
